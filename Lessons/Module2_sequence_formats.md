@@ -490,4 +490,4 @@ One of the most powerful features of bioinformatics databases is that they are *
 
 ---
 
-> ⏭️ **Next:** [Module 3 — Sequence Alignments: BLAST & MSA](module3_alignments_blast_msa.md)
+> ⏭️ **Next:** [Module 3 — Sequence Alignments: BLAST & MSA](module3_alignments_blast.md)
