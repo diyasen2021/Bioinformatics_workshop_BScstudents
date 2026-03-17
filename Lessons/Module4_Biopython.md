@@ -139,9 +139,8 @@ print("Saved", len(records), "sequences to my_sequences.fasta")
 
 
 ### A few to note:
-NCBI asks you not to make more than 3 requests per second — add import time; time.sleep(0.5) between requests in loops to be polite.
-db="nucleotide" → DNA/RNA sequences  |  db="protein" → protein sequences
-rettype="fasta" → FASTA format  |  rettype="gb" → full GenBank record
-SeqIO.read() → one sequence  |  SeqIO.parse() → multiple sequences
-Always call handle.close() after reading
+- NCBI asks you not to make more than 3 requests per second — add import time; time.sleep(0.5) between requests in loops to be polite.
+- db="nucleotide" → DNA/RNA sequences  |  db="protein" → protein sequences
+- rettype="fasta" → FASTA format  |  rettype="gb" → full GenBank record
+- SeqIO.read() → one sequence  |  SeqIO.parse() → multiple sequences
 
