@@ -1,4 +1,4 @@
-# Module 4 — Day 1 Review, Discussion & Big Picture
+# Module 3 — Day Review, Discussion & Big Picture
 
 > **Type:** Interactive review + open discussion  
 > **Duration:** ~45 minutes  
