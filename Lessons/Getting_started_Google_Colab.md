@@ -1,4 +1,4 @@
-# Biopython: A Quick Guide 
+# Biopython: Automate downloading sequences from NCBI
 
 ## What is Google Colab?
 
