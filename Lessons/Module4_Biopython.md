@@ -141,9 +141,88 @@ print("Saved", len(records), "sequences to my_sequences.fasta")
 ### Retrieve a sequence with a keyword search?
 Can you search NCBI by keyword (e.g., "find all insulin sequences in humans")?
 
-### A few to note:
-- NCBI asks you not to make more than 3 requests per second — add import time; time.sleep(0.5) between requests in loops to be polite.
-- db="nucleotide" → DNA/RNA sequences  |  db="protein" → protein sequences
-- rettype="fasta" → FASTA format  |  rettype="gb" → full GenBank record
-- SeqIO.read() → one sequence  |  SeqIO.parse() → multiple sequences
+## 4. Search NCBI by Keyword (Two-step method)
+
+Use `esearch` to find matching IDs, then `efetch` to download them.
+
+> **Important:** Use `[Title]` or `[Gene]` as field tags. The `[Gene Name]` tag is too strict and often returns an empty list.
+
+```python
+# Step 1 — search for IDs
+handle = Entrez.esearch(
+    db="nucleotide",
+    term="insulin[Title] AND Homo sapiens[Organism]",
+    retmax=5
+)
+
+results = Entrez.read(handle)
+handle.close()
+
+id_list = results["IdList"]
+print("Found IDs:", id_list)
+
+# Step 2 — fetch the sequences
+handle = Entrez.efetch(
+    db="nucleotide",
+    id=",".join(id_list),
+    rettype="fasta",
+    retmode="text"
+)
+
+records = list(SeqIO.parse(handle, "fasta-blast"))
+handle.close()
+
+for rec in records:
+    print(rec.id, "-", rec.description[:60])
+```
+
+---
+
+## Common Issues & Fixes
+
+| Problem | Cause | Fix |
+|--------|-------|-----|
+| `esearch` returns empty list | `[Gene Name]` tag is too strict | Use `[Title]` or `[Gene]` instead |
+| `BiopythonDeprecationWarning` | NCBI FASTA has comment lines | Use `"fasta-blast"` instead of `"fasta"` |
+| Too many requests error | Sending requests too fast | Add `time.sleep(0.5)` between requests in loops |
+
+---
+
+## Quick Reference
+
+### Databases
+| `db=` value | Contains |
+|-------------|----------|
+| `"nucleotide"` | DNA/RNA sequences (accessions: `NM_`, `NC_`, `AY`…) |
+| `"protein"` | Protein sequences (accessions: `NP_`, `P0`, `Q`…) |
+
+### Formats
+| `rettype=` value | Description |
+|-----------------|-------------|
+| `"fasta"` | Sequence only |
+| `"gb"` | Full GenBank record with annotations |
+
+### Useful Search Field Tags
+| Tag | Searches |
+|-----|----------|
+| `[Title]` | Sequence description line — most reliable |
+| `[Gene]` | Gene name — broader than `[Gene Name]` |
+| `[Organism]` | Species name e.g. `Homo sapiens[Organism]` |
+| `[Accession]` | Exact accession number |
+
+### SeqIO Parser Formats
+| Format | Use when |
+|--------|----------|
+| `"fasta-blast"` | Fetching from NCBI — handles comment lines safely ✓ |
+| `"fasta"` | Clean local FASTA files with no comments |
+| `"fasta-pearson"` | Files with `;` comment lines |
+
+### Key Rules
+- Always call `handle.close()` after reading
+- Use `SeqIO.read()` for one sequence, `SeqIO.parse()` for multiple
+- Do not exceed 3 requests per second to NCBI
+
+---
+
+*Tutorial prepared for BSc Bioinformatics practical sessions.*
 
