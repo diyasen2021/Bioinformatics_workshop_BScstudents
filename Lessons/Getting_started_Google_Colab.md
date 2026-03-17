@@ -86,13 +86,16 @@ drive.mount('/content/drive')  # Access your Drive files
 
 ---
 
-## Common Use Cases in Your Degree
+## Biopython
 
-- 📊 **Data Analysis** — with Pandas, Matplotlib
-- 🤖 **Machine Learning** — with Scikit-learn, TensorFlow, PyTorch
-- 📐 **Numerical Computing** — with NumPy, SciPy
-- 📝 **Assignments & Projects** — shareable, runnable reports
+**Step 1** - Install Biopython
+```
+!pip install biopython
+```
 
----
-
-*Happy coding! 🚀*
+**Step 2** - Set up your email
+NCBI requires you to identify yourself with an email. This is mandatory.
+```
+from Bio import Entrez, SeqIO
+Entrez.email = "your_email@example.com"
+```
