@@ -78,6 +78,7 @@ drive.mount('/content/drive')  # Access your Drive files
 ---
 
 ## Biopython
+Can we download sequences from NCBI using biopython?
 
 **Step 1** - Install Biopython
 ```
@@ -137,6 +138,8 @@ SeqIO.write(records, "my_sequences.fasta", "fasta")
 print("Saved", len(records), "sequences to my_sequences.fasta")
 ```
 
+### Retrieve a sequence with a keyword search?
+Can you search NCBI by keyword (e.g., "find all insulin sequences in humans")?
 
 ### A few to note:
 - NCBI asks you not to make more than 3 requests per second — add import time; time.sleep(0.5) between requests in loops to be polite.
