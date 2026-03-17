@@ -69,15 +69,6 @@ drive.mount('/content/drive')  # Access your Drive files
 
 ---
 
-## Tips for Students
-
-- **Save to Drive** — Go to `File → Save a copy in Drive` to keep your work permanently
-- **Use GPU** — Go to `Runtime → Change runtime type → T4 GPU` for ML tasks
-- **Keyboard shortcuts** — `Ctrl + Enter` runs a cell; `Shift + Enter` runs and moves to the next
-- **Comment your code** — Use `#` to add comments; your professors will thank you
-
----
-
 ## Limitations
 
 - Sessions disconnect after ~90 minutes of inactivity (free tier)
@@ -99,3 +90,44 @@ NCBI requires you to identify yourself with an email. This is mandatory.
 from Bio import Entrez, SeqIO
 Entrez.email = "your_email@example.com"
 ```
+
+**Step 3** - Fetch a sequence by accession number
+```
+# Fetch the sequence
+handle = Entrez.efetch(
+    db="nucleotide",     # which database
+    id="NM_000207",      # accession number
+    rettype="fasta",      # format: fasta or gb
+    retmode="text"
+)
+
+# Read and parse the result
+record = SeqIO.read(handle, "fasta")
+handle.close()
+
+# Print what we got
+print("ID:", record.id)
+print("Length:", len(record.seq), "bp")
+print("Sequence (first 60 bp):", record.seq[:60])
+```
+
+**Step 4** - Fetch multiple sequences
+```
+# List of accession numbers
+ids = ["NM_000207", "NM_001185098", "NM_005228"]
+
+handle = Entrez.efetch(
+    db="nucleotide",
+    id=",".join(ids),   # join IDs with comma
+    rettype="fasta",
+    retmode="text"
+)
+
+# Use parse() for multiple records
+records = list(SeqIO.parse(handle, "fasta"))
+handle.close()
+
+for rec in records:
+    print(rec.id, "-", len(rec.seq), "bp")
+```
+
