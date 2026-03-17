@@ -131,3 +131,13 @@ for rec in records:
     print(rec.id, "-", len(rec.seq), "bp")
 ```
 
+**Step 5** - Save sequences to a file
+```
+SeqIO.write(records, "my_sequences.fasta", "fasta")
+print("Saved", len(records), "sequences to my_sequences.fasta")
+```
+
+
+### A few to note:
+NCBI asks you not to make more than 3 requests per second — add import time; time.sleep(0.5) between requests in loops to be polite.
+
