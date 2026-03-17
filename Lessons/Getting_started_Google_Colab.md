@@ -1,4 +1,4 @@
-# Google Colab: A Quick Guide for Students
+# Biopython: A Quick Guide 
 
 ## What is Google Colab?
 
