@@ -273,9 +273,9 @@ Based on your findings, answer:
 | Following cross-database links | Every exercise — NCBI ↔ UniProt ↔ PDB ↔ ClinVar |
 | Reading evidence codes | Exercise F (FOXP2 annotations) |
 | Using accession numbers to navigate | All exercises |
-| Navigating taxonomy and genome databases | Exercise D |
-| Connecting structure to disease variants | Exercise E |
-| Cross-checking databases for consistency | Exercise F |
+| Navigating taxonomy and genome databases | Exercise A |
+| Connecting structure to disease variants | Exercise B |
+| Cross-checking databases for consistency | Exercise C |
 
 ### The database ecosystem
 
