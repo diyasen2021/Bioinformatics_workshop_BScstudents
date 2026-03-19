@@ -10,6 +10,48 @@ Before running any code it is worth understanding **why** each step exists and w
 
 ---
 
+### FASTQ Format
+
+**Used for raw sequencing data** — the output directly from a sequencing machine (like an Illumina sequencer). It stores both the sequence AND a quality score for each base.
+
+#### Structure — exactly 4 lines per read
+
+```
+@read_identifier
+SEQUENCE
++
+QUALITY_SCORES
+```
+
+The quality scores are encoded as ASCII characters. Each character corresponds to a number (called a **Phred score**) representing how confident the machine was about that base call.
+
+#### Real example
+
+```fastq
+@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACC
++SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9IC
+```
+
+#### Reading quality scores
+
+| Phred Score (Q) | Base call accuracy | Meaning |
+|----------------|--------------------|---------|
+| Q10 | 90% | Low quality — 1 error per 10 bases |
+| Q20 | 99% | Acceptable |
+| Q30 | 99.9% | Good quality — 1 error per 1000 bases |
+| Q40 | 99.99% | Excellent |
+
+The character `I` in the quality line corresponds to Q40 — excellent quality. The `9` corresponds to Q24 — still acceptable but lower confidence.
+
+#### When is FASTQ used?
+- Raw output from Illumina, PacBio, Oxford Nanopore sequencers
+- First step of almost any sequencing-based analysis
+- Quality control is always performed on FASTQ data before analysis
+
+---
+
 ## 1. Quality Control — FastQC
 
 ### What is a Phred quality score?
