@@ -72,7 +72,7 @@ The major advantage of nanopore sequencing is **read length** — reads can span
 
 ### PacBio — Single Molecule Real Time (SMRT) Sequencing
 
-PacBio uses a **zero-mode waveguide** approach, where individual DNA polymerase molecules sit at the bottom of tiny wells and synthesise DNA in real time. 
+PacBio is real-time continuous observation of polymerase activity,synthesise DNA in real time. 
 - DNA fragments are converted into a circular molecule called a SMRTbell template.
 - Each DNA molecule sits in a nanoscopic well called a Zero-Mode Waveguide (ZMW).
 - A DNA polymerase enzyme is attached at the bottom of the well. It begins synthesizing a new strand by adding nucleotides (A, T, G, C).
