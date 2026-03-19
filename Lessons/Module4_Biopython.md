@@ -186,6 +186,11 @@ for rec in records:
 
 ---
 
+## Do it yourself
+“Modify the code to retrieve all BRCA1 sequences from human and mouse, and save them to a FASTA file.”
+
+---
+
 ## Quick Reference
 
 ### Databases
