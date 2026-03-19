@@ -8,16 +8,14 @@
 
 ## Table of Contents
 
-1. [What We Covered Today](#1-what-we-covered-today)
-2. [Connecting the Dots — A Complete Workflow](#2-connecting-the-dots--a-complete-workflow)
-3. [Common Beginner Questions](#3-common-beginner-questions)
-4. [Review Quiz](#4-review-quiz)
-5. [Reflection Exercises](#5-reflection-exercises)
-6. [Preview of Day 2](#6-preview-of-day-2)
-7. [Glossary of Key Terms](#7-glossary-of-key-terms)
+1. [Connecting the Dots — A Complete Workflow](#2-connecting-the-dots--a-complete-workflow)
+2. [Common Beginner Questions](#3-common-beginner-questions)
+3. [Review Quiz](#4-review-quiz)
+4. [Reflection Exercises](#5-reflection-exercises)
+5. [Glossary of Key Terms](#7-glossary-of-key-terms)
 
 ---
-
+## 1. Connecting the dots
 ### Scenario: A researcher sequences a patient's tumor biopsy and finds a gene she doesn't recognize
 
 **Step 1 — Get the sequence data**  
@@ -46,7 +44,7 @@ She searches **PDB** for the protein's structure. The conserved position is in t
 
 ---
 
-## 3. Common Beginner Questions
+## 2. Common Beginner Questions
 
 **Q: Do I need to learn programming to do bioinformatics?**  
 A: For the tools in today's workshop, no — everything we used was browser-based. However, as analyses become more complex (processing thousands of samples, custom pipelines), programming becomes essential. Python and R are the two most important languages in bioinformatics.
@@ -76,7 +74,7 @@ A: History. Different research groups developed different tools at different tim
 
 ---
 
-## 4. Review Quiz
+## 3. Review Quiz
 
 Test your understanding. Answers are at the bottom of this section.
 
@@ -146,7 +144,7 @@ d) FASTQ
 
 ---
 
-## 5. Reflection Exercises
+## 4. Reflection Exercises
 
 These are discussion questions — there is no single right answer. Think about them individually, then discuss with your group.
 
@@ -193,24 +191,6 @@ The COVID-19 pandemic killed millions of people. Bioinformatics played a crucial
 - On January 10, 2020, the SARS-CoV-2 genome sequence was publicly released in GenBank. Within 2 days, vaccine sequences were designed. What bioinformatics steps were likely involved?
 - During the pandemic, viral sequences were collected globally and deposited in the GISAID database. How would multiple sequence alignment help epidemiologists track the virus?
 - Why is it important that these databases are publicly accessible and free to use?
-
----
-
-## 6. Preview of Day 2
-
-Tomorrow we will build on what we learned today and move into more quantitative and applied topics.
-
-| Module | Topic |
-|--------|-------|
-| Module 5 | Introduction to Genomics — genome assembly and annotation |
-| Module 6 | Gene expression — what is RNA-seq and how do we analyze it? |
-| Module 7 | Phylogenetics — building evolutionary trees |
-| Module 8 | Mini-project — an end-to-end analysis from sequence to conclusion |
-
-**To prepare:**  
-- Make sure you can recall the BLAST E-value rule: *smaller = more significant*
-- Remember the four nucleotide bases: A, T, G, C (DNA) and A, U, G, C (RNA)
-- Be ready to use the tools from today — we will build directly on them
 
 ---
 
