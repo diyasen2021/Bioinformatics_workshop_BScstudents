@@ -1,7 +1,5 @@
-# Module 1: Introduction to Genomics and Sequencing Technologies
+# Module 7: Introduction to Genomics and Sequencing Technologies
 
-> **NGS Workshop — 2-Day Intensive Program for UG & PG Students**  
-> Day 1 | Module 1 of 4
 
 ---
 
