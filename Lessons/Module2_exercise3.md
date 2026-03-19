@@ -92,18 +92,6 @@ Low-confidence regions often correspond to:
 
 ---
 
-## 🔬 Step 7: Optional Comparison
-
-If available, compare your predicted structure with an experimental one from the PDB.
-
-### Questions to consider:
-
-* Do the overall folds match?
-* Are helices and sheets conserved?
-* Where do differences occur?
-
----
-
 ## 💡 Discussion Questions
 
 * Would you trust all regions of this prediction equally?
@@ -123,12 +111,4 @@ If available, compare your predicted structure with an experimental one from the
 
 ---
 
-## 🌟 Bonus Challenge
 
-Try:
-
-* A longer protein
-* A protein with unknown structure
-* Comparing multiple sequences
-
-What changes do you observe?
