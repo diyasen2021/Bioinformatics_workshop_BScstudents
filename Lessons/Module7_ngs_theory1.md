@@ -82,7 +82,7 @@ The newer **HiFi (CCS) mode** sequences the same circular DNA molecule multiple 
 
 ### Ion Torrent
 
-Ion Torrent sequencing detects **hydrogen ions** released during DNA synthesis rather than fluorescence. As a nucleotide is incorporated, a proton is released, causing a measurable change in pH that is detected by a semiconductor chip. The technology is faster and less expensive to instrument than optical methods but generates shorter reads (200–600 bp) with a higher error rate in homopolymer regions. Ion Torrent is commonly used in clinical settings for targeted sequencing panels, such as oncology panels testing a defined set of cancer-associated variants.
+Ion Torrent sequencing detects **hydrogen ions** released during DNA synthesis rather than fluorescence or electrical impulses. As a nucleotide is incorporated, a proton is released, causing a measurable change in pH that is detected by a semiconductor chip. The technology is faster and less expensive to instrument than optical methods but generates shorter reads (200–600 bp) with a higher error rate in homopolymer regions. Ion Torrent is commonly used in clinical settings for targeted sequencing panels, such as oncology panels testing a defined set of cancer-associated variants.
 
 ### Platform Comparison Summary
 
