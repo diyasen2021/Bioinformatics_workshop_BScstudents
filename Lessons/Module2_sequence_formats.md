@@ -340,6 +340,12 @@ Shape determines function. If you know the 3D structure of a protein's active si
 
 > 💡 **AlphaFold:** In 2021, DeepMind's AlphaFold AI predicted the structures of virtually all ~200 million known proteins — a revolution made possible by bioinformatics. These predicted structures are freely available at https://alphafold.ebi.ac.uk/
 
+> **AlphaFold** (developed by Google DeepMind) is an AI system that predicts a protein’s 3D structure directly from its amino acid sequence.
+It is transformative for drug discovery because protein structure determines how drugs bind, and traditional methods like crystallography are slow and expensive.
+AlphaFold uses deep learning trained on known protein structures, meaning it learns folding patterns from data rather than relying on fixed rules.
+It achieved near-experimental accuracy in the CASP14, marking a major breakthrough in computational biology.
+It does not replace experimental methods, but accelerates research by guiding experiments and prioritizing the most promising targets.
+
 ---
 
 ## 4. Hands-on Session — Retrieving Data from Databases
