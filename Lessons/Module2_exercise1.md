@@ -22,43 +22,6 @@ By the end of this tutorial, you should be able to:
 
 ---
 
-## Background
-
-### What is the Protein Data Bank (PDB)?
-
-The Protein Data Bank (PDB) is a global repository of experimentally determined protein structures.
-
-Structures in PDB are obtained using techniques such as:
-
-* X-ray crystallography
-* Cryo-electron microscopy
-* Nuclear Magnetic Resonance (NMR)
-
-These structures represent real experimental data.
-
----
-
-### What is AlphaFold?
-
-AlphaFold is an AI-based system that predicts protein 3D structures from amino acid sequences.
-
-Its predictions are stored in the AlphaFold Protein Structure Database.
-
-Each prediction comes with a confidence score called **pLDDT**.
-
----
-
-### What is pLDDT?
-
-pLDDT (predicted Local Distance Difference Test) is a confidence score:
-
-* 90–100 → very high confidence
-* 70–90 → good confidence
-* 50–70 → low confidence
-* <50 → very low confidence
-
----
-
 ## Example Protein
 
 We will use the Anti-CRISPR protein AcrIE7.
