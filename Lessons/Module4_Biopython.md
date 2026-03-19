@@ -139,7 +139,7 @@ print("Saved", len(records), "sequences to my_sequences.fasta")
 ```
 
 
-### 4. Search NCBI by Keyword (Two-step method)
+**Search NCBI by Keyword (Two-step method)**
 
 Use `esearch` to find matching IDs, then `efetch` to download them.
 
