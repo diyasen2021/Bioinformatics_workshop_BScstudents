@@ -72,7 +72,11 @@ The major advantage of nanopore sequencing is **read length** — reads can span
 
 ### PacBio — Single Molecule Real Time (SMRT) Sequencing
 
-PacBio uses a **zero-mode waveguide** approach, where individual DNA polymerase molecules sit at the bottom of tiny wells and synthesise DNA in real time. Each nucleotide is fluorescently labelled, and the signal is detected as it is incorporated. Like Nanopore, PacBio generates long reads — typically **15–25 kb** for standard long-read mode.
+PacBio uses a **zero-mode waveguide** approach, where individual DNA polymerase molecules sit at the bottom of tiny wells and synthesise DNA in real time. 
+- DNA fragments are converted into a circular molecule called a SMRTbell template.
+- Each DNA molecule sits in a nanoscopic well called a Zero-Mode Waveguide (ZMW).
+- A DNA polymerase enzyme is attached at the bottom of the well. It begins synthesizing a new strand by adding nucleotides (A, T, G, C).
+- Each nucleotide (A, T, G, C) is labeled with a different fluorescent dye and when each nucleotide is incorporated, it emits a flash of light
 
 The newer **HiFi (CCS) mode** sequences the same circular DNA molecule multiple times, generating consensus reads with accuracy exceeding **99.9%**, combining the length of long reads with the accuracy approaching short reads. PacBio HiFi is increasingly used for phased genome assembly, structural variant detection, and full-length isoform sequencing (Iso-Seq).
 
