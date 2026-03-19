@@ -166,18 +166,3 @@ Think about:
 * Experimental data is still essential for validation
 
 ---
-
-## Summary Statement
-
-AlphaFold provides powerful predictions, but experimental methods are still required to confirm and understand real biological structures.
-
----
-
-## Optional Extension
-
-Try this workflow with another protein that has both:
-
-* A PDB structure
-* An AlphaFold prediction
-
-Compare and analyze similarities and differences.
