@@ -6,12 +6,10 @@
 ## Table of Contents
 
 - [1.1 What is Genomics?](#11-what-is-genomics)
-- [1.2 The Central Dogma of Molecular Biology](#12-the-central-dogma-of-molecular-biology)
-- [1.3 Structure of the Human Genome](#13-structure-of-the-human-genome)
-- [1.4 From Sanger Sequencing to Next Generation Sequencing](#14-from-sanger-sequencing-to-next-generation-sequencing)
-- [1.5 Major NGS Platforms](#15-major-ngs-platforms)
-- [1.6 Choosing the Right Sequencing Technology](#16-choosing-the-right-sequencing-technology)
-- [1.7 Key Terminology](#17-key-terminology)
+- [1.2 From Sanger Sequencing to Next Generation Sequencing](#14-from-sanger-sequencing-to-next-generation-sequencing)
+- [1.3 Major NGS Platforms](#15-major-ngs-platforms)
+- [1.4 Choosing the Right Sequencing Technology](#16-choosing-the-right-sequencing-technology)
+- [1.5 Key Terminology](#17-key-terminology)
 
 ---
 
@@ -23,48 +21,7 @@ Genomics has transformed biological research by shifting the focus from studying
 
 ---
 
-## 1.2 The Central Dogma of Molecular Biology
-
-To understand why sequencing matters, students must first be comfortable with the Central Dogma, proposed by Francis Crick in 1958. It describes the flow of genetic information within a biological system:
-
-$$\text{DNA} \rightarrow \text{RNA} \rightarrow \text{Protein}$$
-
-DNA is transcribed into messenger RNA (mRNA) by the enzyme RNA polymerase. The mRNA is then translated into a protein by ribosomes, with transfer RNAs (tRNAs) reading the codons in triplets. Each codon corresponds to a specific amino acid, and the sequence of amino acids ultimately determines the structure and function of the protein.
-
-A few important nuances for students to appreciate:
-
-- **Not all DNA is transcribed, and not all RNA is translated.** Regulatory RNAs such as miRNA, lncRNA, and rRNA play important structural and regulatory roles without ever becoming protein.
-- **Reverse transcription** — RNA being converted back to DNA — occurs in retroviruses (like HIV) and is also harnessed in the laboratory for RNA sequencing (RNA-seq), where mRNA is converted to complementary DNA (cDNA) before sequencing.
-- **Epigenetic modifications** (methylation of DNA, histone modification) can alter gene expression without changing the underlying DNA sequence — an important concept when interpreting NGS data from epigenomics experiments.
-
----
-
-## 1.3 Structure of the Human Genome
-
-The genome is organised hierarchically. At the finest level, DNA is a double-stranded helix made up of four nucleotide bases — **Adenine (A)**, **Thymine (T)**, **Guanine (G)**, and **Cytosine (C)** — paired according to complementary base-pairing rules (A–T and G–C). These strands are read in a **5' to 3' direction**, and this directionality is critical for understanding how sequencing reads are generated and mapped.
-
-At a higher level, the genome is divided into:
-
-**Exons**  
-The coding portions of a gene that are retained in the mature mRNA after splicing and ultimately translated into protein. For a typical human gene, exons make up a small fraction of the total gene length.
-
-**Introns**  
-Non-coding sequences that interrupt the exons within a gene. They are transcribed into pre-mRNA but are spliced out before translation. Introns were long considered "junk DNA," but research has revealed that many harbour regulatory sequences and small non-coding RNAs.
-
-**Promoters and Regulatory Regions**  
-Sequences upstream (and sometimes downstream) of a gene that control when, where, and how strongly a gene is expressed. Transcription factors bind these regions to activate or repress transcription.
-
-**Repetitive Elements**  
-Sequences such as SINEs (Short Interspersed Nuclear Elements), LINEs (Long Interspersed Nuclear Elements), and satellite repeats make up over 50% of the human genome. They pose a significant challenge in NGS analysis because short reads from these regions are difficult to map uniquely.
-
-**Non-coding RNAs**  
-Includes ribosomal RNA (rRNA), transfer RNA (tRNA), microRNA (miRNA), and long non-coding RNA (lncRNA) — all transcribed but not translated.
-
-> 💡 **Practical note:** Understanding genome structure is directly relevant to experiment design. If you are only interested in protein-coding regions, you might choose **Whole Exome Sequencing (WES)** rather than **Whole Genome Sequencing (WGS)**, reducing both cost and data complexity considerably.
-
----
-
-## 1.4 From Sanger Sequencing to Next Generation Sequencing
+## 1.2 From Sanger Sequencing to Next Generation Sequencing
 
 ### Sanger Sequencing (First Generation)
 
@@ -92,7 +49,7 @@ Next Generation Sequencing (also called second-generation or massively parallel 
 
 ---
 
-## 1.5 Major NGS Platforms
+## 1.3 Major NGS Platforms
 
 ### Illumina — Sequencing by Synthesis (SBS)
 
@@ -134,7 +91,7 @@ Ion Torrent sequencing detects **hydrogen ions** released during DNA synthesis r
 
 ---
 
-## 1.6 Choosing the Right Sequencing Technology
+## 1.4 Choosing the Right Sequencing Technology
 
 One of the most important practical skills for any genomics researcher is matching the sequencing technology to the biological question. There is no single "best" platform — the right choice depends on read length requirements, accuracy needs, budget, sample type, and downstream analysis.
 
@@ -151,7 +108,7 @@ One of the most important practical skills for any genomics researcher is matchi
 
 ---
 
-## 1.7 Key Terminology
+## 1.5 Key Terminology
 
 Before moving into the practical modules, students should be familiar with the following terms:
 
