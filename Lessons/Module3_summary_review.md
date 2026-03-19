@@ -18,42 +18,6 @@
 
 ---
 
-## 1. What We Covered Today
-
-### Module 1 — What is Bioinformatics?
-- Bioinformatics is the intersection of biology, computer science, and mathematics
-- It exists because modern biology generates more data than humans can interpret manually
-- It solves real problems: vaccine design, cancer diagnosis, pathogen tracking, crop improvement
-
-### Module 2 — Sequence Data, Formats & Databases
-- Biological data is stored as sequences of letters (DNA: ATGC; protein: 20 amino acid letters)
-- **FASTA**: the universal format for storing any sequence
-- **FASTQ**: raw sequencing data with per-base quality scores
-- **GenBank**: richly annotated sequence records with metadata
-- Four major databases, each with a distinct focus:
-
-| Database | Focus | Unique value |
-|----------|-------|--------------|
-| NCBI | Nucleotide sequences, genes, literature | Most comprehensive; connects to PubMed |
-| UniProt | Protein function & annotation | Best for understanding what a protein does |
-| EMBL-EBI | European nucleotide archive, genome browsers | Ensembl genome browser; InterPro domains |
-| PDB | 3D molecular structures | Only source for atomic coordinates |
-
-### Module 3 — Alignments: BLAST & MSA
-- A sequence alignment arranges sequences so matching positions line up
-- **BLAST** searches databases to find sequences similar to your query
-- The **E-value** measures statistical significance — smaller is better
-- **Multiple Sequence Alignment (MSA)** aligns 3+ sequences to reveal conservation patterns
-- Conserved positions across many species = functionally important
-
----
-
-## 2. Connecting the Dots — A Complete Workflow
-
-Here is how everything you learned today fits into a single real-world scenario.
-
----
-
 ### Scenario: A researcher sequences a patient's tumor biopsy and finds a gene she doesn't recognize
 
 **Step 1 — Get the sequence data**  
