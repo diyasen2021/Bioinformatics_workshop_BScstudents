@@ -9,7 +9,6 @@
 - [1.2 From Sanger Sequencing to Next Generation Sequencing](#14-from-sanger-sequencing-to-next-generation-sequencing)
 - [1.3 Major NGS Platforms](#15-major-ngs-platforms)
 - [1.4 Choosing the Right Sequencing Technology](#16-choosing-the-right-sequencing-technology)
-- [1.5 Key Terminology](#17-key-terminology)
 
 ---
 
@@ -112,25 +111,5 @@ One of the most important practical skills for any genomics researcher is matchi
 
 ---
 
-## 1.5 Key Terminology
-
-Before moving into the practical modules, students should be familiar with the following terms:
-
-| Term | Definition |
-|---|---|
-| **Read** | A single sequenced DNA fragment, represented as a string of A, T, G, C characters |
-| **Read Length** | The number of base pairs in a single read (e.g. Illumina: 150 bp paired-end) |
-| **Paired-end Sequencing** | Sequencing both ends of a DNA fragment — improves alignment and variant detection |
-| **Coverage (Depth)** | Average number of reads covering each genome position. 30× = each base covered ~30 times |
-| **FASTQ Format** | Standard raw data file format — contains sequence + per-base quality scores |
-| **Phred Quality Score** | Log-scale accuracy measure. Q30 = 99.9% accuracy (1 in 1,000 error chance) |
-| **Reference Genome** | Representative DNA sequence used as a standard for alignment (human: GRCh38/hg38) |
-| **Genome Assembly** | Reconstructing genome sequence from reads — reference-guided or de novo |
-| **WGS** | Whole Genome Sequencing — sequences the entire genome |
-| **WES** | Whole Exome Sequencing — sequences only protein-coding regions (~2% of genome) |
-
----
-
-> *This foundation in genomics and sequencing technologies sets the stage for everything that follows in the workshop. A solid grasp of these concepts — the structure of the genome, the principles behind each sequencing platform, and the vocabulary of NGS data — will make the hands-on bioinformatics sessions considerably more intuitive.*
 
 ---
