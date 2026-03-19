@@ -138,10 +138,8 @@ SeqIO.write(records, "my_sequences.fasta", "fasta")
 print("Saved", len(records), "sequences to my_sequences.fasta")
 ```
 
-### Retrieve a sequence with a keyword search?
-Can you search NCBI by keyword (e.g., "find all insulin sequences in humans")?
 
-## 4. Search NCBI by Keyword (Two-step method)
+### 4. Search NCBI by Keyword (Two-step method)
 
 Use `esearch` to find matching IDs, then `efetch` to download them.
 
@@ -223,6 +221,4 @@ for rec in records:
 - Do not exceed 3 requests per second to NCBI
 
 ---
-
-*Tutorial prepared for BSc Bioinformatics practical sessions.*
 
