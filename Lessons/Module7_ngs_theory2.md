@@ -369,9 +369,22 @@ Certain sequencing errors occur preferentially on one strand of the DNA. If a va
 
 ---
 
-> 💡 **Key takeaway:** The quality of your NGS data is determined long before you open a terminal. Every decision — sample type, extraction method, library kit, sequencing depth, and platform — shapes what you can and cannot detect. Understanding the wet-lab workflow makes you a much better computational analyst, because you can distinguish genuine biological signal from technical noise.
+## 1.5 Key Terminology
+
+Before moving into the practical modules, students should be familiar with the following terms:
+
+| Term | Definition |
+|---|---|
+| **Read** | A single sequenced DNA fragment, represented as a string of A, T, G, C characters |
+| **Read Length** | The number of base pairs in a single read (e.g. Illumina: 150 bp paired-end) |
+| **Paired-end Sequencing** | Sequencing both ends of a DNA fragment — improves alignment and variant detection |
+| **Coverage (Depth)** | Average number of reads covering each genome position. 30× = each base covered ~30 times |
+| **FASTQ Format** | Standard raw data file format — contains sequence + per-base quality scores |
+| **Phred Quality Score** | Log-scale accuracy measure. Q30 = 99.9% accuracy (1 in 1,000 error chance) |
+| **Reference Genome** | Representative DNA sequence used as a standard for alignment (human: GRCh38/hg38) |
+| **Genome Assembly** | Reconstructing genome sequence from reads — reference-guided or de novo |
+| **WGS** | Whole Genome Sequencing — sequences the entire genome |
+| **WES** | Whole Exome Sequencing — sequences only protein-coding regions (~2% of genome) |
 
 ---
 
-**Previous:** [Module 1 — Introduction to Genomics & Sequencing Technologies](./module1_introduction_to_genomics.md)  
-**Next:** [Module 3 — Quality Control of Raw Sequencing Data](./module3_quality_control.md)
