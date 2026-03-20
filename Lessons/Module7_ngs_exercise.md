@@ -134,8 +134,8 @@ grep -v '>' ecoli_rel606.fasta | tr -d '\n' | wc -c
 
 ```bash
 %%bash
-wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_1.fastq.gz
-wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_2.fastq.gz
+wget https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_1.fastq.gz
+wget https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_2.fastq.gz
 
 gunzip -f SRR2584863_1.fastq.gz
 gunzip -f SRR2584863_2.fastq.gz
