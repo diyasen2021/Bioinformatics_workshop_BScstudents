@@ -229,7 +229,7 @@ A: History. Different research groups developed different tools at different tim
 
 ---
 
-## 3. Review Quiz
+## Review Quiz
 
 Test your understanding. Answers are at the bottom of this section.
 
@@ -299,55 +299,6 @@ d) FASTQ
 
 ---
 
-## 4. Reflection Exercises
-
-These are discussion questions — there is no single right answer. Think about them individually, then discuss with your group.
-
----
-
-**Exercise 1 — Interpreting a result**
-
-You BLAST an unknown protein sequence. The results show:
-- Top hit: "Hypothetical protein XYZ123 [uncultured marine bacterium]" — E-value 1e-47, 41% identity
-- Second hit: "Alcohol dehydrogenase [Bacillus subtilis]" — E-value 1e-31, 38% identity
-
-What can you reasonably conclude? What would your next step be?
-
-*Discussion points: What does "hypothetical protein" mean? Would you trust the top hit or look more carefully at the second? How would you verify the function?*
-
----
-
-**Exercise 2 — Conservation and disease**
-
-You are analyzing a patient with a suspected hereditary disease. You align the patient's protein sequence with the same protein from 20 species. You find a mutation at position 112 (Arginine → Cysteine). In all 20 other species, position 112 is Arginine.
-
-- Is this mutation likely to be disease-causing? What is your reasoning?
-- What additional evidence would you want to collect?
-- Is evolutionary conservation alone enough to confirm pathogenicity?
-
----
-
-**Exercise 3 — Choosing the right tool**
-
-For each scenario, which database or tool would you use first and why?
-
-a) You isolated a new antibiotic-producing bacterium and want to know what species it is.  
-b) You want to know the function of the protein encoded by the gene FOXP2.  
-c) You want to see the 3D structure of the insulin receptor to understand how metformin might bind.  
-d) You want to find all published research papers about a specific gene.  
-e) You want to compare the genome structure of humans and chimpanzees side by side.  
-
----
-
-**Exercise 4 — Real-world thinking**
-
-The COVID-19 pandemic killed millions of people. Bioinformatics played a crucial role in the response.
-
-- On January 10, 2020, the SARS-CoV-2 genome sequence was publicly released in GenBank. Within 2 days, vaccine sequences were designed. What bioinformatics steps were likely involved?
-- During the pandemic, viral sequences were collected globally and deposited in the GISAID database. How would multiple sequence alignment help epidemiologists track the virus?
-- Why is it important that these databases are publicly accessible and free to use?
-
----
 
 ## 7. Glossary of Key Terms
 
