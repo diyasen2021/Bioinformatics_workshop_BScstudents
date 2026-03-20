@@ -178,4 +178,4 @@ These are not hypothetical — these are things that happened or are happening r
 
 ---
 
-> ⏭️ **Next:** [Module 2 — Sequence Data, Formats & Databases](module2_sequence_data_and_databases.md)
+
