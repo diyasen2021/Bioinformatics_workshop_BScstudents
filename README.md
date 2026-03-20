@@ -31,14 +31,6 @@ NGS sessions use real Illumina data from the **Lenski Long-Term Evolution Experi
 
 ---
 
-## Materials
+## Instructor
 
-| File | Session |
-|------|---------|
-| `shell_intro_tutorial.md` | 3 |
-| `fastq_intro_tutorial.md` | 6 |
-| `variant_calling_tutorial.md` | 7 |
-
----
-
-*BSc Bioinformatics — Introductory Workshop*
+**Diya Sen** is a senior bioinformatician, educator and mentor with over 18 years of experience across industry and academia. Her work spans whole genome sequencing, metagenomics, and transcriptomics projects. [Connect on LinkedIn](https://www.linkedin.com/in/diya-sen2022/)
