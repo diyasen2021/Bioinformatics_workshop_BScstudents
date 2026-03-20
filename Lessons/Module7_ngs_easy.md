@@ -23,7 +23,7 @@ We are using data from the **Lenski Long-Term Evolution Experiment**. Since 1988
 
 ---
 
-## Step 0 — Open Google Colab
+## Set up Google Colab
 
 1. Go to [colab.research.google.com](https://colab.research.google.com)
 2. Click **New notebook**
