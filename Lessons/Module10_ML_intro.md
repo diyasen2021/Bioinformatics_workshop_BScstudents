@@ -1,4 +1,4 @@
-# Module 6 — Introduction to AI & Machine Learning in Bioinformatics
+# Module 10 — Introduction to AI & Machine Learning in Bioinformatics
 
 > **Type:** Lecture + Case Studies + Interactive Demos  
 > **Duration:** ~120 minutes (70 min lecture, 50 min case studies & discussion)  
