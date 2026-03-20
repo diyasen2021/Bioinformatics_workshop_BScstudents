@@ -232,6 +232,3 @@ In this tutorial you have:
 
 ---
 
-*BSc Bioinformatics — Introduction to Sequencing Data*
-
-*Dataset: Lenski Long-Term Evolution Experiment (SRR2584863), via the European Nucleotide Archive.*
