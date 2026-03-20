@@ -33,4 +33,4 @@ NGS sessions use real Illumina data from the **Lenski Long-Term Evolution Experi
 
 ## Instructor
 
-**Diya Sen** is a senior bioinformatician, educator and mentor with over 18 years of experience across industry and academia. Her work spans whole genome sequencing, metagenomics, and transcriptomics projects. [Connect on LinkedIn](https://www.linkedin.com/in/diya-sen2022/)
+**Diya Sen** is a senior bioinformatician, educator and mentor with over 18 years of experience across industry and academia. Her work spans whole genome sequencing, metagenomics, and transcriptomics projects. [Follow on LinkedIn](https://www.linkedin.com/in/diya-sen2022/)
