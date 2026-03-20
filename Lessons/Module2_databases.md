@@ -224,9 +224,11 @@ A UniProt entry for a protein tells you:
 - 3D structure links (to PDB)
 - Links to NCBI, Ensembl, and other databases
 
-#### UniProt accession numbers
-
-UniProt accessions are 6 characters: `P68871` (Human Hemoglobin beta), `P04637` (Human p53 tumor suppressor).
+#### How are the UniprotKB databases made
+- Researchers submit DNA sequences to databases like GenBank, EMBL-ENA, and DDBJ
+- Coding regions (genes) are translated into protein sequences
+- These proteins are automatically added to UniProtKB (TrEMBL)
+- A smaller set is manually reviewed and moved to Swiss-Prot, where high-quality annotations are added
 
 ---
 
