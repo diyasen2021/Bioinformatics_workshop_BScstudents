@@ -24,6 +24,8 @@ Genomics has transformed biological research by shifting the focus from studying
 
 ### Sanger Sequencing (First Generation)
 
+https://www.youtube.com/watch?v=X9566yI2cBo
+
 The story of DNA sequencing begins with Frederick Sanger, who developed chain-termination sequencing in **1977** — a method that earned him his second Nobel Prize. The principle relies on incorporating **dideoxynucleotides (ddNTPs)** — modified bases that lack the 3'-OH group required for chain elongation. 
 - In Sanger sequencing, special bases (Dideoxynucleotides) stop DNA synthesis at random positions, producing fragments of different lengths.
 - Each fragment tells you the identity of the last base
