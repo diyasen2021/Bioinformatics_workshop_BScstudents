@@ -662,10 +662,10 @@ This sequence is from a human protein. Run it through InterProScan and then answ
 Unknown sequence
       │
       ▼
-InterProScan ──▶ Domains, GO terms, family
+Uniprot ──▶ Map to orthologs
       │
       ▼
-Pfam entry ──▶ Evolutionary history, structure, conserved residues
+InterProScan ──▶ Domains, GO terms, family
       │
       ▼
 KEGG ──▶ Pathway context, upstream/downstream partners, disease
@@ -675,5 +675,3 @@ Biological hypothesis formed
 ```
 
 ---
-
-> ⏭️ **Next:** [Module 4 — Day 1 Review & Discussion](module4_summary_and_review.md) *(or continue to Day 2 materials)*
