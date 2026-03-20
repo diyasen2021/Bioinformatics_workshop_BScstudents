@@ -1,46 +1,201 @@
 # Module 3 — Day Review, Discussion & Big Picture
 
-> **Type:** Interactive review + open discussion  
-> **Duration:** ~45 minutes  
-> **Level:** Beginner
+# Practical Exercises — Sequence Alignment & Biological Databases
+
+> **Level:** BSc Bioinformatics  
+> **Tools:** NCBI BLAST, NCBI Databases, Clustal Omega, Simple Phylogeny (EBI)  
+> **Format:** Three exercises, increasing in complexity
 
 ---
 
-## Table of Contents
+## Exercise 1 — Outbreak Investigation ⭐⭐⭐
 
-1. [Connecting the Dots — A Complete Workflow](#2-connecting-the-dots--a-complete-workflow)
-2. [Common Beginner Questions](#3-common-beginner-questions)
-3. [Review Quiz](#4-review-quiz)
-4. [Reflection Exercises](#5-reflection-exercises)
-5. [Glossary of Key Terms](#7-glossary-of-key-terms)
+### Scenario
+
+A hospital in Southeast Asia has reported a cluster of severe respiratory illness. Five patients have been admitted over two weeks with similar symptoms — high fever, rapid lung deterioration, and poor response to standard antibiotics. Throat swabs were taken and sent for sequencing. You have been given five partial 16S rRNA sequences, one from each patient.
+
+Your job is to identify the pathogen, determine whether all five cases are caused by the same organism or represent different sources of infection, and place it in evolutionary context relative to known pathogens. The clinical team is waiting for your report.
 
 ---
-## 1. Connecting the dots
-### Scenario: A researcher sequences a patient's tumor biopsy and finds a gene she doesn't recognize
 
-**Step 1 — Get the sequence data**  
-The sequencer produces raw **FASTQ** files with millions of short reads and quality scores.
+### Your sequences
 
-**Step 2 — Extract the sequence of interest**  
-After processing the raw data, the researcher isolates a 300 bp fragment of interest and saves it as a **FASTA** file.
+```fasta
+>Patient_1
+AGAGTTTGATCCTGGCTCAGATTGAACGCTGGCGGCAGGCCTAACACATGCAAGTCGAGC
+GGTAGCACAGAGAGCTTGCTCTCGGGTGACGAGCGGCGGACGGGTGAGTAATGTCTGGGA
+AACTGCCCGATGGAGGGGGATAACTACTGGAAACGGTAGCTAATACCGCATAATGTCGACA
+GACCAAAGAGGGGGACCTTCGGGCCTCTTGCCATCAGATGTGCCCAGATGGGATTAGCTAG
+TAGGTGGGGTAACGGCTCACCTAGGCGACGATCCCTAGCTGGTCTGAGAGGATGACCAGCC
 
-**Step 3 — BLAST it**  
-She runs **blastn** at NCBI. The top hit has E-value `1e-142`, 98% identity to a known oncogene.  
-→ *She now knows what gene she's likely looking at.*
+>Patient_2
+AGAGTTTGATCCTGGCTCAGATTGAACGCTGGCGGCAGGCCTAACACATGCAAGTCGAGC
+GGTAGCACAGAGAGCTTGCTCTCGGGTGACGAGCGGCGGACGGGTGAGTAATGTCTGGGA
+AACTGCCCGATGGAGGGGGATAACTACTGGAAACGGTAGCTAATACCGCATAATGTCGACA
+GACCAAAGAGGGGGACCTTCGGGCCTCTTGCCATCAGATGTGCCCAGATGGGATTAGCTAG
+TAGGTGGGGTAACGGCTCACCTAGGCGACGATCCCTAGCTGGTCTGAGAGGATGACCAGCC
 
-**Step 4 — Retrieve the known record**  
-She pulls the full **GenBank** record from NCBI to see what is annotated about this gene — where the coding sequence is, what exons it has, what protein it encodes.
+>Patient_3
+AGAGTTTGATCCTGGCTCAGAGTGAACGCTGGCGGCAGGCTTAACACATGCAAGTCGAAC
+GGCAGCACGGGTGCTTGCACCTGGTGGCGAGCGGCGGACGGGTGAGTAACGCGTGGGAAT
+CTACCTTATAGTGGGGGATAACTATTGGAAACGATAGCTAATACCGCATAATGTCTACGGA
+CCAAAGAGGGGGACCTTCGGGCCTCTTGCCATCAGATGAGCCCAGATGGGATTAGCTAGTA
+GGTGGGGTAATGGCTCACCTAGGCGACGATCCCTAGCTGGTCTGAGAGGATGATCAGCCAC
 
-**Step 5 — Look up the protein**  
-She searches **UniProt** for the encoded protein. She learns it is a kinase involved in cell cycle control, and there are known disease variants.
+>Patient_4
+AGAGTTTGATCCTGGCTCAGATTGAACGCTGGCGGCAGGCCTAACACATGCAAGTCGAGC
+GGTAGCACAGAGAGCTTGCTCTCGGGTGACGAGCGGCGGACGGGTGAGTAATGTCTGGGA
+AACTGCCCGATGGAGGGGGATAACTACTGGAAACGGTAGCTAATACCGCATAATGTCGACA
+GACCAAAGAGGGGGACCTTCGGGCCTCTTGCCATCAGATGTGCCCAGATGGGATTAGCTAG
+TAGGTGGGGTAACGGCTCACCTAGGCGACGATCCCTAGCTGGTCTGAGAGGATGACCAGCC
 
-**Step 6 — Multiple sequence alignment**  
-She downloads orthologous sequences from 10 species and runs **Clustal Omega**. She discovers her patient's mutation falls at a position that is **100% conserved across all vertebrates** — a strong indication the mutation is functionally significant.
+>Patient_5
+TTGAAGAGTTTGATCCTGGCTCAGAACGAACGCTGGCGGCAGGCTTAACACATGCAAGTC
+GAACGGCAGCATGGGCGCTTGCACCTGGTGGCGAGCGGCGGACGGGTGAGTAACGCGTGG
+GAATCTATCCTATAGTGGGGGATAACTATTGGAAACGATAGCTAATACCGCATAACGTCTC
+TGAACCAAAGAGGGGGACCTTCGGGCCTCTTGCCATCAGATGCACCCAGATGGGATTAGCT
+AGTAGGTGGGGTAATGGCTCACCTAGGCGACGATCCCTAGCTGGTCTGAGAGGATGATCAG
+```
 
-**Step 7 — Check the structure**  
-She searches **PDB** for the protein's structure. The conserved position is in the ATP-binding pocket — this mutation may disrupt kinase activity.
+---
 
-**Conclusion:** A sequencing experiment → a biologically and clinically meaningful finding. Every step used tools from today's workshop.
+### Part A — Identify the pathogen (BLAST)
+
+Run each sequence through NCBI BLAST. Use the **16S ribosomal RNA sequences** database for a clean, targeted search.
+
+For each patient, record:
+- Top hit organism
+- % identity
+- E-value
+- Query coverage
+
+> 💡 **Hint:** Pay close attention to which patients share identical or near-identical top hits and which do not. This has clinical implications.
+
+**Questions:**
+1. Are all five patients infected with the same organism?
+2. If not — which patients cluster together, and which appear to be a different source?
+3. Look up the organism(s) you identified. Are they known pathogens? What diseases do they cause?
+
+---
+
+### Part B — Multiple sequence alignment (Clustal Omega)
+
+Now fetch the full 16S rRNA sequences for your top BLAST hits from NCBI. You want one representative sequence per distinct organism identified across the five patients — download them in FASTA format.
+
+Run a multiple sequence alignment using **Clustal Omega** at https://www.ebi.ac.uk/Tools/msa/clustalo/
+
+> 💡 **Hint:** Include your five patient sequences in the alignment alongside the reference sequences you fetched. This lets you see directly where each patient's sequence sits relative to known strains.
+
+**Questions:**
+1. Where are the most conserved regions in the alignment? Where does the most variation occur?
+2. Can you identify positions that differ consistently between the two groups of patients?
+
+---
+
+### Part C — Build a simple phylogenetic tree
+
+EBI provides a basic phylogeny tool that runs directly from a Clustal Omega alignment. After your alignment completes, look for the **"Phylogenetic Tree"** tab in the results.
+
+You have not covered phylogenetics in detail yet — that is fine. Focus on reading the tree topology rather than the branch lengths.
+
+> 💡 **Hint:** A phylogenetic tree groups sequences by similarity. Sequences that share a more recent common ancestor appear closer together. Look at which patient sequences cluster with which reference sequences.
+
+**Questions:**
+1. Draw or screenshot the tree. Do the patient sequences form one cluster or two?
+2. Which known reference strain is each group of patients most closely related to?
+3. Based on the tree, do you think this outbreak has a single source or multiple independent sources of infection? What would this mean for the clinical team's response?
+
+---
+
+## Exercise 2 — Genome Assembly Metadata ⭐⭐
+
+### Scenario
+
+You are starting a comparative genomics project on *Clostridioides difficile* — a notorious hospital-acquired pathogen responsible for severe gut infections and increasingly resistant to treatment. Before doing any analysis you need to survey what genome assemblies are publicly available and build a summary table of their key metadata.
+
+Find **five complete (not scaffold or contig level) genome assemblies** for *Clostridioides difficile* in the NCBI Assembly database and compile their metadata into a spreadsheet.
+
+---
+
+### What to collect
+
+For each assembly, record the following:
+
+| Field | Where to find it |
+|-------|-----------------|
+| Assembly accession | Assembly page |
+| Strain name | Assembly page |
+| Assembly level | Complete / Scaffold / Contig |
+| Genome size (Mb) | Assembly stats |
+| Number of contigs | Assembly stats |
+| GC content (%) | Assembly stats |
+| Sequencing technology | Assembly page or linked BioSample |
+| Country of isolation | Linked BioSample record |
+| Isolation source | Linked BioSample record |
+| Year submitted | Assembly page |
+
+> 💡 **Hints:**
+> - Start at https://www.ncbi.nlm.nih.gov/assembly
+> - Filter by organism name and use the **"Assembly level"** filter on the left to show only complete genomes
+> - Each assembly links to a **BioSample** record — this is where you will find isolation metadata like country and source
+> - You can download a summary table directly from NCBI rather than clicking through each record individually — explore the **"Download"** options on the search results page
+
+---
+
+### Questions
+
+1. Is there much variation in genome size across your five assemblies? What might cause genuine biological variation in genome size between strains of the same species?
+2. Do the assemblies come from a variety of countries, or are they concentrated in particular regions? What might this reflect about research activity or disease burden?
+3. What sequencing technologies were used? Do you notice a relationship between sequencing technology and assembly quality (e.g. number of contigs)?
+4. *C. difficile* is known for carrying mobile genetic elements that confer antibiotic resistance. How might you use these assemblies to investigate that — what would your next step be?
+
+---
+
+## Exercise 3 — Exploring the Taxonomy Database ⭐
+
+### Scenario
+
+A colleague hands you a list of organism names from a metagenomic study of soil samples. Some are familiar, some are not. You need to verify each one, find its taxonomic lineage, and flag any that may be misidentified or outdated synonyms.
+
+---
+
+### Your organism list
+
+1. *Candidatus Solibacter usitatus*
+2. *Gemmatimonas aurantiaca*
+3. *Conexibacter woesei*
+4. *Ktedonobacter racemifer*
+5. *Chloracidobacterium thermophilum*
+
+---
+
+### What to do
+
+Use the **NCBI Taxonomy Browser** at https://www.ncbi.nlm.nih.gov/taxonomy to look up each organism.
+
+For each one, record:
+
+| Field | Description |
+|-------|-------------|
+| Full taxonomic lineage | From domain down to species |
+| Phylum | |
+| Is the name current or a synonym? | Check for any "also known as" notes |
+| Any genome assemblies available? | How many? |
+| Any nucleotide sequences in GenBank? | Rough count |
+
+> 💡 **Hints:**
+> - The taxonomy page for each organism links directly to all associated sequence data in NCBI — use these links
+> - "Candidatus" is a designation for organisms that have been detected but never successfully cultured in the lab — note which organisms have this status and think about what it implies for the available data
+> - Some of these organisms belong to phyla you may never have heard of — look them up briefly
+
+---
+
+### Questions
+
+1. How many of these organisms belong to well-known phyla (e.g. Proteobacteria, Firmicutes) versus obscure or recently described phyla?
+2. What does the *Candidatus* designation mean, and how does it affect the quantity and type of data available for that organism compared to the cultured organisms on the list?
+3. Which organism has the most genome assemblies available? What might explain this?
+4. If you were designing a PCR primer to detect one of these organisms in an environmental sample, which database within NCBI would you use next, and why?
 
 ---
 
