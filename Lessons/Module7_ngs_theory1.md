@@ -52,6 +52,8 @@ Next Generation Sequencing (also called second-generation or massively parallel 
 
 ### Illumina — Sequencing by Synthesis (SBS)
 
+https://www.youtube.com/watch?v=CZeN-IgjYCo
+
 Illumina is by far the most widely used NGS platform globally, dominating both research and clinical sequencing. 
 - Its chemistry is based on **reversible terminator sequencing by synthesis**.
 - DNA fragments are attached to a flow cell surface and amplified locally to form dense clusters.
