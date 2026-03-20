@@ -293,7 +293,7 @@ Every PDB entry has a **4-character alphanumeric code**, e.g.:
 
 #### Why does structure matter?
 
-Shape determines function. If you know the 3D structure of a protein's active site, you can:
+Structure determines function. If you know the 3D structure of a protein's active site, you can:
 - Understand how it works mechanistically
 - Design a drug molecule that fits into it like a key in a lock
 - Predict the effect of mutations
