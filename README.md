@@ -1,5 +1,5 @@
 # Introduction to Bioinformatics
-### Undergraduate Workshop 
+### 2-day workshop 
 
 A hands-on introductory workshop for BSc students with no prior computational experience. Students work with real biological data throughout, using Google Colab — no installation required.
 
