@@ -15,6 +15,8 @@ In this tutorial you will:
 
 That's it — no complex pipelines, just the first and most important step in any sequencing analysis.
 
+
+https://colab.research.google.com/drive/1J0mgoV54OAN4mgU1PgQRsGsWLxDnBlfK?usp=sharing
 ---
 
 ## The data
