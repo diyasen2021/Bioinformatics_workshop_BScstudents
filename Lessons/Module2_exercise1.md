@@ -1,4 +1,4 @@
-# Tutorial: Comparing Experimental and Predicted Protein Structures
+# Exercise: Comparing Experimental and Predicted Protein Structures
 
 ## Overview
 
